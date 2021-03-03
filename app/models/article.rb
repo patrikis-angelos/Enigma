@@ -7,4 +7,5 @@ class Article < ApplicationRecord
 
   has_many :article_categories
   has_many :categories, through: :article_categories
+  validates :categories, :length => { :minimum => 1 }
 end

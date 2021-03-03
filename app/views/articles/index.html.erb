@@ -1,3 +1,4 @@
 <br>
 <br>
-<%= session[:id] %>
+<%= current_user.name %>
+<p><%= link_to 'Log out', '/sessions', method: :delete%></p>

@@ -13,6 +13,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
+    session.delete(:id)
+    redirect_to '/sessions'
   end
 end
