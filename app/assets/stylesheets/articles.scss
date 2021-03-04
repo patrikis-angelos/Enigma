@@ -1,3 +1,18 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.main-article {
+  width: 75%;
+  height: calc(65vh - 60px);
+}
+
+.side-article {
+  width: 25%;
+  height: calc(65vh - 60px);
+}
+
+.article {
+  width:25%;
+  height: 35vh;
+}

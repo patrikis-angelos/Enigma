@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
 
     <script src="https://kit.fontawesome.com/65e5819ba9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="app/stylesheets/reset.css">
+    <%= stylesheet_link_tag 'reset'%>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +17,7 @@
       <%= render "layouts/nav" %>
     </head>
     <main>
-    <%= yield %>
+      <%= yield %>
     </main>
     <footer class = "flex space-between footer bg-color-primary">
       <%= render "layouts/footer"%>

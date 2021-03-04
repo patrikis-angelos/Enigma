@@ -4,6 +4,10 @@ $secondary: #f66004;
 $colors: (
   primary: $primary,
   secondary: $secondary,
+  red: red,
+  blue: blue,
+  yellow: yellow,
+  green: green,
 );
 
 @each $key, $value in $colors {

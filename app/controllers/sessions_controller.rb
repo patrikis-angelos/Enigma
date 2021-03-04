@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    # show log in form
+    @categories = Category.all.order(:priority)
   end
 
   def create

@@ -7,16 +7,17 @@
   </div>
   <div class = "center">
     <span><%= link_to 'Home', root_path%></span>
-    <span class = "m-left-30">Category 1</span>
-    <span class = "m-left-30">Category 2</span>
-    <span class = "m-left-30">Category 3</span>
-    <span class = "m-left-30">Category 4</span>
+    <% @categories.each do |category| %>
+      <span class = "m-left-30"><%= link_to category.name, root_path %></span>
+    <% end %>
   </div>
   <div class = "center p-right-30">
     <% if session[:id] %>
-      <span><%= link_to 'Logout', '/sessions', method: :delete%></span>
+      <span><%= current_user.name%></span>
+      <span class = "m-left-10">|</span>
+      <span class = "m-left-10"><%= link_to 'Logout', '/sessions', method: :delete%></span>
     <% else %>
-      <span><%= link_to 'Login', '/sessions', method: :put%></span>
+      <span><%= link_to 'Login', '/sessions'%></span>
       <span class = "m-left-10">|</span>
       <span class = "m-left-10"><%= link_to 'Sign Up', new_user_path%></span>
     <% end %>

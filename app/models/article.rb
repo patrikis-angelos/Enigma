@@ -8,4 +8,13 @@ class Article < ApplicationRecord
   has_many :article_categories
   has_many :categories, through: :article_categories
   validates :categories, length: { minimum: 1 }
+
+  def self.best
+    arr = Article.all.map(&:id)
+    unless arr.empty?
+      votes = Vote.where(article_id: arr).group(:article_id).count
+      best_article = votes.max_by {|k, v| v}
+      Article.find(best_article[0])
+    end
+  end
 end
