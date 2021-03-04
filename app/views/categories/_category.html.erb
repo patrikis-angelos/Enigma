@@ -1,3 +1,6 @@
 <div class = "article bg-color-yellow">
-  <%= category.name %>
+  <p><%= category.name %></p>
+  <% unless category.articles.empty? %>
+    <p><%= category.last_article.title%></p>
+  <% end %>
 </div>
