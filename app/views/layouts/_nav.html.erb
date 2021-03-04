@@ -7,7 +7,7 @@
   </div>
   <div class = "center">
     <span><%= link_to 'Home', root_path%></span>
-    <%= render partial: "layouts/category", collection: @categories %>
+    <%= category_links %>
   </div>
   <div class = "center p-right-30">
     <%= session_links %>

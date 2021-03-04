@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.main-article {
+.best-article {
   width: 75%;
   height: calc(65vh - 60px);
 }
@@ -12,7 +12,12 @@
   height: calc(65vh - 60px);
 }
 
-.article {
+.category {
   width: 25%;
   height: 35vh;
+}
+
+.article {
+  width: 50%;
+  height: 50vh;
 }
