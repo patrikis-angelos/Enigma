@@ -1,4 +1,5 @@
 <br>
 <br>
-<%= current_user.name %>
-<p><%= link_to 'Log out', '/sessions', method: :delete%></p>
+<% if current_user %>
+  <%= current_user.name %>
+<% end %>

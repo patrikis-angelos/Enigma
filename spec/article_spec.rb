@@ -12,7 +12,7 @@ RSpec.describe 'Article', type: :model do
     end
     it 'must have at least one category' do
       user = create(:user)
-      article = user.articles.build(title: "Title", text: "text", image: "image_url")
+      article = user.articles.build(title: 'Title', text: 'text', image: 'image_url')
       expect(article).to_not be_valid
     end
     it 'belongs to an author' do

@@ -1,0 +1,17 @@
+$primary: #4e443f;
+$secondary: #f66004;
+
+$colors: (
+  primary: $primary,
+  secondary: $secondary,
+);
+
+@each $key, $value in $colors {
+  .color-#{$key} {
+    color: $value;
+  }
+
+  .bg-color-#{$key} {
+    background-color: $value;
+  }
+}
