@@ -4,9 +4,11 @@ module ArticlesHelper
     content = ''
     articles.each do |article|
       if count <= 0
-        @color = 'red'
+        @inverse_flex = ''
+        @end = ''
       else
-        @color = 'blue'
+        @inverse_flex = 'inverse-flex'
+        @end = 'end'
       end
       content << (render article)
       count = count == 2 ? -1 : count + 1

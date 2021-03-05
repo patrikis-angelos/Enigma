@@ -1,8 +1,11 @@
 <div class = "flex">
-  <div class = "bg-color-red best-article">
+  <div class = "best-article relative">
     <% if @best_article%>
-      <p><%= @best_article.title%></p>
-      <p><%= @best_article.text%></p>
+      <img class = "absolute img" src="<%= @best_article.image %>" alt = "">
+      <div class = "absolute" >
+        <p><%= @best_article.title%></p>
+        <p><%= @best_article.text%></p>
+      </div>
     <% end %>
   </div>
   <div class = "bg-color-blue side-article">

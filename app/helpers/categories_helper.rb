@@ -9,6 +9,6 @@ module CategoriesHelper
   end
 
   def latest_article(category)
-    category.last_article.title unless category.articles.empty?
+    category.last_article unless category.articles.empty?
   end
 end

@@ -1,12 +1,17 @@
-<div class= "<%= "article bg-color-#{@color}" %>">
-  <%= article.title %>
-  <br>
-  <br>
-  <% if current_user %>
-    <% if !article.voted_by?(current_user)%>
-      <p><%= link_to 'Upvote', "/articles/#{article.id}/votes", method: :post%></p>
-    <% else %>
-      <p><%= link_to 'Downvote', "/articles/#{article.id}/votes/#{current_user.find_users_vote(article)}", method: :delete%></p>
-    <% end %>
-  <% end%>
+<div class= "flex article relative <%= "#{@inverse_flex}" %>" >
+  <div class = "img-container">
+    <img class = "img absolute <%= "#{@end}" %>" src="<%= article.image %>" alt="">
+  </div>
+  <div class = "text-container">
+    <%= article.title %>
+    <br>
+    <br>
+    <% if current_user %>
+      <% if !article.voted_by?(current_user)%>
+        <p><%= link_to 'Upvote', "/articles/#{article.id}/votes", method: :post%></p>
+      <% else %>
+        <p><%= link_to 'Downvote', "/articles/#{article.id}/votes/#{current_user.find_users_vote(article)}", method: :delete%></p>
+      <% end %>
+    <% end%>
+  </div>
 </div>

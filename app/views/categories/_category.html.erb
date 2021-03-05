@@ -1,4 +1,7 @@
-<div class = "category bg-color-yellow">
-  <p><%= link_to category.name, category %></p>
-  <p><%= latest_article(category) %></p>
+<div class = "category relative">
+  <img class = "absolute img" src="<%= latest_article(category).image %>" alt="">
+  <div class = "absolute">
+    <p><%= link_to category.name, category %></p>
+    <p><%= latest_article(category).title %></p>
+  </div>
 </div>
