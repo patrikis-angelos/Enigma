@@ -1,0 +1,16 @@
+<h2>Create an Article</h2>
+<%= form_with model: @article do |f| %>
+  <div><%= display_error(@article)%></div>
+  <div><%= f.label :title, "Title" %></div>
+  <div><%= f.text_field :title, placeholder: "Enter the title"%></div>
+  <div><%= f.label :text, "Content"%></div>
+  <div><%= f.text_area :text, placeholder: "Write your article", class: 'area'%></div>
+  <div><%= f.label :image, "Image"%></div>
+  <div><%= f.text_field :image, placeholder: "Enter your image url"%></div>
+  <div>Choose a category</div>
+  <% @categories.each do |category| %>
+    <%= check_box_tag "category_ids[#{category.name}]", category.id%>
+    <%= f.label category.name, category.name%><br/>
+  <% end %>
+  <div><%= f.submit "Submit" %></div>
+<% end %>
