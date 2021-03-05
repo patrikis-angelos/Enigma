@@ -1,7 +1,9 @@
 <div class = "flex">
   <div class = "bg-color-red best-article">
-    <p><%= @best_article.title%></p>
-    <p><%= @best_article.text%></p>
+    <% if @best_article%>
+      <p><%= @best_article.title%></p>
+      <p><%= @best_article.text%></p>
+    <% end %>
   </div>
   <div class = "bg-color-blue side-article">
     <p>Extra Feature</p>

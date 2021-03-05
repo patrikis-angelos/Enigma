@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_093940) do
 
   create_table "votes", force: :cascade do |t|
     t.integer "user_id"
-    t.integer " "
+    t.integer "article_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

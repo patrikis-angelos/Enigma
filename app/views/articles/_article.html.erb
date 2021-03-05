@@ -1,3 +1,12 @@
 <div class= "<%= "article bg-color-#{@color}" %>">
   <%= article.title %>
+  <br>
+  <br>
+  <% if current_user %>
+    <% if !article.voted_by?(current_user)%>
+      <p><%= link_to 'Upvote', "/articles/#{article.id}/votes", method: :post%></p>
+    <% else %>
+      <p><%= link_to 'Downvote', "/articles/#{article.id}/votes/#{current_user.find_users_vote(article)}", method: :delete%></p>
+    <% end %>
+  <% end%>
 </div>

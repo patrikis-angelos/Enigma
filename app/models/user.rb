@@ -3,4 +3,9 @@ class User < ApplicationRecord
 
   has_many :articles, foreign_key: :author_id
   has_many :votes
+
+  def find_users_vote(article)
+    vote = self.votes.find_by(article_id: article.id)
+    vote.id
+  end
 end

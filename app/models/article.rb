@@ -14,7 +14,12 @@ class Article < ApplicationRecord
     unless arr.empty?
       votes = Vote.where(article_id: arr).group(:article_id).count
       best_article = votes.max_by { |_k, v| v }
-      Article.find(best_article[0])
+      Article.find(best_article[0]) if best_article
     end
+  end
+
+  def voted_by?(user)
+    users = self.votes.map(&:user_id)
+    users.any?(user.id)
   end
 end
