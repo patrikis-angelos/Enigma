@@ -1,10 +1,14 @@
 $primary: #4e443f;
+$primary-transparent: #4e443f1f;
 $secondary: #f66004;
+$secondary-light: #fa9455;
 $white: white;
 
 $colors: (
   primary: $primary,
+  transparent: $primary-transparent,
   secondary: $secondary,
+  secondary-light: $secondary-light,
   white: $white,
   yellow: yellow,
 );
@@ -17,12 +21,20 @@ $colors: (
   .bg-color-#{$key} {
     background-color: $value;
   }
+
+  .hover-#{key}:hover {
+    color: $value;
+  }
 }
 
 a:hover {
   color: $secondary;
 }
 
-footer a:hover{
+.color-secondary a:hover {
+  color: black;
+}
+
+footer .color-secondary a:hover{
   color: $white;
 }
