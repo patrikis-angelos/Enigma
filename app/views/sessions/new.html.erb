@@ -1,6 +1,15 @@
-<p>Sign In</p>
-<%= form_tag('/sessions', method: 'put') do %>
-  <%= label_tag(:name, "Username")%>
-  <%= text_field_tag(:name) %>
-  <%= submit_tag("Submit")%>
-<% end %> 
+<div class="flex column align-center full-height bg-color-primary color-white rounded">
+  <p class = "extra-bold big m-top-80">Sign In</p>
+  <div class = "m-top-20">
+    <%= form_tag('/sessions', method: 'put') do %>
+      <div class = "flex column align-center">
+        <div>
+          <%= label_tag(:name, "Username")%>
+          <%= text_field_tag(:name, nil, placeholder: 'Enter your name') %>
+        </div>
+        <div class = "m-top-10"><%= submit_tag("Sign In")%></div>
+      </div>
+    <% end %>
+  </div>
+  <p class = "m-top-10 bold"><%= link_to "Don't have an account?", new_user_path %></p>
+</div>

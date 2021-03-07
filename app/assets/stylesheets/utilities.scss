@@ -10,11 +10,19 @@
   flex-direction: row-reverse;
 }
 
+.column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .end {
   right: 0;
 }
 
-.center {
+.center-h {
   margin: auto 0;
 }
 
@@ -53,4 +61,8 @@
 
 .width-50 {
   width: 50%;
+}
+
+.full-height {
+  min-height: calc(100vh - 120px);
 }

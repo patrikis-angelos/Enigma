@@ -6,7 +6,8 @@ module ApplicationHelper
       content << "<span class = 'm-left-10 color-primary small'>|</span>"
       content << "<span class = 'm-left-10 color-primary small'>#{link_to 'Create article', new_article_path}</span>"
       content << "<span class = 'm-left-10 color-primary small'>|</span>"
-      content << "<span class = 'm-left-10 color-primary small'>#{link_to 'Logout', '/sessions', method: :delete}</span>"
+      content << "<span class = 'm-left-10 color-primary small'>#{link_to 'Logout', '/sessions',
+                                                                          method: :delete}</span>"
     else
       content << "<span class = 'color-primary small'>#{link_to 'Login', '/sessions'}</span>"
       content << "<span class = 'm-left-10 color-primary small'>|</span>"
@@ -17,10 +18,10 @@ module ApplicationHelper
 
   def display_error(model)
     content = ''
-    if model.errors
-      model.errors.full_messages.each do |error|
-        content << "<p>#{error}</p>"
-      end
+    return content unless model.errors
+
+    model.errors.full_messages.each do |error|
+      content << "<p>#{error}</p>"
     end
     content.html_safe
   end

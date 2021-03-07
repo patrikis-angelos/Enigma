@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :votes
 
   def find_users_vote(article)
-    vote = self.votes.find_by(article_id: article.id)
+    vote = votes.find_by(article_id: article.id)
     vote.id
   end
 end
