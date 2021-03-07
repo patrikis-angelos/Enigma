@@ -1,7 +1,11 @@
-<div class = "category relative">
+<div class = "category relative rounded">
+  <div class = "radial-grad absolute z-1"></div>
   <img class = "absolute img" src="<%= latest_article(category).image %>" alt="">
-  <div class = "absolute">
-    <p><%= link_to category.name, category %></p>
-    <p><%= latest_article(category).title %></p>
+  <div class = "absolute p-left-20 p-top-10 z-2">
+    <p class = "color-white extra-bold"><%= link_to category.name, category%></p>
+    <div class = "underline bg-color-yellow"></div>
+  </div>
+  <div class = "absolute bottom p-left-20 p-bottom-10 z-2">
+    <p class = "color-white bold"><%= latest_article(category).title %></p>
   </div>
 </div>

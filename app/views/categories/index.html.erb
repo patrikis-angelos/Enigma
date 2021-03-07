@@ -1,14 +1,8 @@
-<div class = "flex">
+<div class = "flex rounded">
   <div class = "best-article relative">
-    <% if @best_article%>
-      <img class = "absolute img" src="<%= @best_article.image %>" alt = "">
-      <div class = "absolute" >
-        <p><%= @best_article.title%></p>
-        <p><%= @best_article.text%></p>
-      </div>
-    <% end %>
+    <%= show_best_article %>
   </div>
-  <div class = "bg-color-blue side-article">
+  <div class = "side-article">
     <p>Extra Feature</p>
   </div>
 </div>

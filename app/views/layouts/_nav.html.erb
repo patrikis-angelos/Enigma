@@ -1,16 +1,16 @@
-<nav class = "flex space-between navbar">
+<nav class = "flex space-between navbar rounded fixed bg-color-white z-2">
   <div class = "center p-left-30">
     <a class = "flex" href = "/">
-      <h1>EniGma</h1>
-      <i class="fas fa-question"></i>
+      <h1 class = "extra-bold color-primary big">EniGma</h1>
+      <i class="fas fa-question color-secondary big"></i>
     </a>
   </div>
   <div class = "center">
-    <span><%= link_to 'Home', root_path%></span>
+    <span class = "color-primary small"><%= link_to 'Home', root_path%></span>
     <%= category_links %>
   </div>
   <div class = "center p-right-30">
     <%= session_links %>
-    <i class="fas fa-search m-left-10"></i>
+    <a class = "color-primary" href="#"><i class="fas fa-search m-left-10"></i></a>
   </div>
 </nav>

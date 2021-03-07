@@ -3,7 +3,7 @@ module CategoriesHelper
     content = ''
     categories = Category.all.order(:priority)
     categories.each do |category|
-      content << "<span class = 'm-left-30'>#{link_to category.name, category}</span>"
+      content << "<span class = 'm-left-30 color-primary small'>#{link_to category.name, category}</span>"
     end
     content.html_safe
   end

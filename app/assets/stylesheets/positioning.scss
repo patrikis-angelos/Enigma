@@ -9,6 +9,12 @@ $pixels: (
   80: 80px,
 );
 
+$index: (
+  1: 1,
+  2: 2,
+  3: 3,
+);
+
 @each $i, $value in $pixels {
   .m-#{$i} {
     margin: $value;
@@ -68,5 +74,11 @@ $pixels: (
   .p-y-#{$i} {
     padding-top: $value;
     padding-bottom: $value;
+  }
+}
+
+@each $key, $value in $index {
+  .z-#{$key} {
+    z-index: $value;
   }
 }

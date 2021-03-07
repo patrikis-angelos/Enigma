@@ -1,13 +1,12 @@
 $primary: #4e443f;
 $secondary: #f66004;
+$white: white;
 
 $colors: (
   primary: $primary,
   secondary: $secondary,
-  red: red,
-  blue: blue,
+  white: $white,
   yellow: yellow,
-  green: green,
 );
 
 @each $key, $value in $colors {
@@ -18,4 +17,12 @@ $colors: (
   .bg-color-#{$key} {
     background-color: $value;
   }
+}
+
+a:hover {
+  color: $secondary;
+}
+
+footer a:hover{
+  color: $white;
 }
