@@ -17,10 +17,7 @@
       <div><%= f.text_area :text, placeholder: "Write your article", class: 'area'%></div>
     </div>
     <div class = "m-top-10 color-secondary">Choose one or more categories</div>
-    <% @categories.each do |category| %>
-      <%= check_box_tag "category_ids[#{category.name}]", category.id%>
-      <%= f.label category.name, category.name%><br/>
-    <% end %>
+    <%= category_tags(f) %>
     <div class = "m-top-10"><%= f.submit "Submit" %></div>
   <% end %>
 </div>

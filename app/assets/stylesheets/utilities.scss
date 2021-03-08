@@ -23,7 +23,8 @@
 }
 
 .center-h {
-  margin: auto 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .relative {
@@ -65,4 +66,8 @@
 
 .full-height {
   min-height: calc(100vh - 120px);
+}
+
+.center-text {
+  text-align: center;
 }

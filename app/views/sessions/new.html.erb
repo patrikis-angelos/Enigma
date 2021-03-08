@@ -1,13 +1,14 @@
 <div class="flex column align-center full-height bg-color-primary color-white rounded">
   <p class = "extra-bold big m-top-80">Sign In</p>
   <div class = "m-top-20">
-    <%= form_tag('/sessions', method: 'put') do %>
+    <%= form_with url: '/sessions', method: 'put' do |f|%>
+      <div class = "m-bottom-10 color-secondary"><%= flash[:notice]%></div>
       <div class = "flex column align-center">
         <div>
-          <%= label_tag(:name, "Username")%>
-          <%= text_field_tag(:name, nil, placeholder: 'Enter your name') %>
+          <%= f.label :name, "Username"%>
+          <%= f.text_field :name, placeholder: 'Enter your name' %>
         </div>
-        <div class = "m-top-10"><%= submit_tag("Sign In")%></div>
+        <div class = "m-top-10"><%= f.submit "Sign In"%></div>
       </div>
     <% end %>
   </div>

@@ -15,10 +15,14 @@
   </head>
 
   <body>
-    <head>
+    <header>
       <%= render "layouts/nav" %>
-    </head>
-    <main class = "m-top-60">
+      <div class = "m-top-60">
+        <%= display_alert %>
+        <%= display_confirm %>
+      </div>
+    </header>
+    <main>
       <%= yield %>
     </main>
     <footer class = "flex space-between footer bg-color-primary">

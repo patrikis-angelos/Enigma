@@ -7,5 +7,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @articles = @category.articles.order(created_at: :desc)
+    session[:url] = category_path
   end
 end

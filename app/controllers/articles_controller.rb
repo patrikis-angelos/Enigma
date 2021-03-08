@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
     end
 
     if @article.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Article created succesfully"
     else
       render :new
     end

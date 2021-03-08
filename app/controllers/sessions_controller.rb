@@ -7,8 +7,9 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: params[:name])
     if @user
       session[:id] = @user.id
-      redirect_to root_path
+      redirect_to root_path, notice: "Logged in succefully"
     else
+      flash.now.alert = "User not found"
       render :new
     end
   end
