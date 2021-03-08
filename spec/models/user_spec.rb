@@ -1,5 +1,5 @@
 require 'rails_helper'
-require_relative 'factories'
+require_relative '../factories'
 
 RSpec.describe 'User', type: :model do
   it 'creates valid users' do
@@ -13,6 +13,14 @@ RSpec.describe 'User', type: :model do
     it 'can have many articles' do
       user = User.reflect_on_association(:articles)
       expect(user.macro).to eql(:has_many)
+    end
+  end
+  describe '#find_users_vote' do
+    it 'finds the current users vote id of an article in the database' do
+      user = create(:user)
+      article = create(:article, author_id: user.id)
+      vote = create(:vote, user_id: user.id, article_id: article.id)
+      expect(user.find_users_vote(article)).to eql(vote.id)
     end
   end
 end

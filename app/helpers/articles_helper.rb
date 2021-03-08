@@ -31,7 +31,9 @@ module ArticlesHelper
   def show_best_article
     content = ''
     if @article
-      content << "<div class = 'radial-grad absolute z-1'></div>
+      url = "/users/#{@article.author.id}"
+      content << "<p class = 'p-left-10 m-top-5 extra-small absolute z-2 color-secondary bold'>Written by #{link_to @article.author.name, url}</p>
+                  <div class = 'radial-grad absolute z-1'></div>
                   <img class = 'absolute img' src='#{@article.image}' alt = ''>
                   <div class = 'absolute bottom p-left-20 p-bottom-10 z-2' >
                   <p class = 'm-bottom-10 extra-bold color-secondary'>#{@article.title}</p>

@@ -2,7 +2,6 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all.order(:priority).limit(4)
     @article = Article.best
-    @user_article = current_user.articles.best
   end
 
   def show

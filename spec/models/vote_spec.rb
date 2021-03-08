@@ -1,5 +1,5 @@
 require 'rails_helper'
-require_relative 'factories'
+require_relative '../factories'
 
 RSpec.describe 'Vote', type: :model do
   it 'creates valid votes' do

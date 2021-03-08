@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :ensure_user, only: [:show]
+
   def new
     @user = User.new
     @categories = Category.all.order(:priority)
