@@ -10,10 +10,9 @@ class Article < ApplicationRecord
   validates :categories, length: { minimum: 1 }
 
   def self.best
-    arr = Article.all.map(&:id)
-    return if arr.empty?
+    return unless Article.any?
 
-    votes = Vote.where(article_id: arr).group(:article_id).count
+    votes = Vote.group(:article_id).count
     best_article = votes.max_by { |_k, v| v }
     best_article ? Article.find(best_article[0]) : Article.last
   end

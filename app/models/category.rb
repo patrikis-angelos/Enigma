@@ -4,6 +4,6 @@ class Category < ApplicationRecord
   has_many :articles, through: :article_categories
 
   def last_article
-    articles.last
+    articles.order(:created_at).last
   end
 end

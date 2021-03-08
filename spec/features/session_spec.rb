@@ -8,7 +8,7 @@ RSpec.feature 'Sessions' do
     visit '/sessions'
     fill_in 'name', with: user.name
     click_on 'Sign In'
-    expect(page).to have_content (user.name)
+    expect(page).to have_content(user.name)
   end
   scenario 'Log out' do
     log_in

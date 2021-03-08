@@ -4,7 +4,7 @@ require_relative '../helpers'
 
 RSpec.feature 'Users' do
   scenario 'A user creates a new article' do
-    user = log_in
+    log_in
     category = create(:category)
     visit root_path
     click_on 'Create article'

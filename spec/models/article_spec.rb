@@ -29,7 +29,7 @@ RSpec.describe 'Article', type: :model do
       article1 = create(:article)
       article2 = create(:article)
       create(:vote, article_id: article1.id)
-      2.times {create(:vote, article_id: article2.id)}
+      2.times { create(:vote, article_id: article2.id) }
       expect(Article.best.id).to eql(article2.id)
     end
   end

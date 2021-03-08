@@ -8,18 +8,14 @@ module CategoriesHelper
     content.html_safe
   end
 
-  def category_tags(form)
+  def category_checkboxes(form)
     content = ''
     @categories.each do |category|
-      h = "category_ids[#{category.name}]"
-      content << "<div><span>#{check_box_tag h, category.id}</sapn>
+      category_ids = "category_ids[#{category.name}]"
+      content << "<div><span>#{check_box_tag category_ids, category.id}</sapn>
                   <span>#{form.label category.name, category.name}<span></div>"
     end
     content.html_safe
-  end
-
-  def latest_article(category)
-    category.last_article unless category.articles.empty?
   end
 
   def show_category_names(article)
@@ -27,15 +23,15 @@ module CategoriesHelper
     if @category
       content << "<p class = 'color-secondary-light bold'>#{@category.name}</p>"
       content << "<div class = 'underline bg-color-secondary-light'>"
-      content << "</div>"
+      content << '</div>'
     elsif @user
       article.categories.each do |category|
         cat_path = "/categories/#{category.id}"
         content << "<div class = 'm-right-5'>"
         content << "<p class = 'p-right-5 color-secondary-light bold'>#{link_to category.name, cat_path}</p>"
         content << "<div class = 'underline bg-color-secondary-light'>"
-        content << "</div>"
-        content << "</div>"
+        content << '</div>'
+        content << '</div>'
       end
     end
     content.html_safe

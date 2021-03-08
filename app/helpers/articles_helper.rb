@@ -30,25 +30,30 @@ module ArticlesHelper
 
   def show_best_article
     content = ''
-    if @article
-      url = "/users/#{@article.author.id}"
-      content << "<p class = 'p-left-10 m-top-5 extra-small absolute z-2 color-secondary bold'>Written by #{link_to @article.author.name, url}</p>
-                  <div class = 'radial-grad absolute z-1'></div>
-                  <img class = 'absolute img' src='#{@article.image}' alt = ''>
-                  <div class = 'absolute bottom p-left-20 p-bottom-10 z-2' >
-                  <p class = 'm-bottom-10 extra-bold color-secondary'>#{@article.title}</p>
-                  <p class = 'color-white'>#{@article.text.truncate(200, omission: '...')}</p>
-                  </div>"
-    end
+    return content unless @best_article
+
+    url = "/users/#{@best_article.author.id}"
+    content << "<p class = 'p-left-10 m-top-5 extra-small absolute z-2 color-secondary bold'>
+                Written by #{link_to @best_article.author.name, url}</p>
+                <div class = 'radial-grad absolute z-1'></div>
+                <img class = 'absolute img' src='#{@best_article.image}' alt = ''>
+                <div class = 'absolute bottom p-left-20 p-bottom-10 z-2' >
+                <p class = 'm-bottom-10 extra-bold color-secondary'>#{@best_article.title}</p>
+                <p class = 'color-white'>#{@best_article.text.truncate(200, omission: '...')}</p>
+                </div>"
     content.html_safe
   end
 
+  def latest_article(category)
+    category.last_article unless category.articles.empty?
+  end
+
   def show_image(category)
-    latest_article(category).image if latest_article(category)
+    latest_article(category)&.image
   end
 
   def show_title(category)
-    latest_article(category).title if latest_article(category)
+    latest_article(category)&.title
   end
 
   def show_truncated_text(article)
