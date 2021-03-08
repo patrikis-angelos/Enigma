@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all.order(:priority)
+    @categories = Category.all.order(:priority).limit(4)
     @best_article = Article.best
   end
 
