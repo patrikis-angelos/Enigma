@@ -4,12 +4,11 @@
   </div>
   <div class = "text-container bg-color-transparent">
     <div class = "absolute p-left-10 p-top-10">
-      <p class = "color-secondary-light bold"><%= @category.name %></p>
-      <div class = "underline bg-color-secondary-light"></div>
+      <div class = "flex wrap"><%= show_category_names(article) %></div>
     </div>
     <p class = "m-top-40 p-left-10 bold"><%= article.title %></p>
-    <p class = "p-left-10 m-top-5 extra-small">by <%= article.author.name %></p>
-    <p class = "content p-left-10 m-top-10"><%= show_truncated_text(article) %>...</p>
+    <p class = "p-left-10 m-top-5 extra-small">by <%= link_to article.author.name, "/users/#{article.author.id}" %></p>
+    <p class = "content p-left-10 m-top-10"><%= show_truncated_text(article) %></p>
     <div class = "flex absolute bottom width-50 m-bottom-20 p-left-10">
       <p class = "color-secondary"><a href="#">Read more</a></p>
       <p class = "absolute right p-right-10"><%= show_upvote(article) %></p>

@@ -30,12 +30,12 @@ module ArticlesHelper
 
   def show_best_article
     content = ''
-    if @best_article
+    if @article
       content << "<div class = 'radial-grad absolute z-1'></div>
-                  <img class = 'absolute img' src='#{@best_article.image}' alt = ''>
+                  <img class = 'absolute img' src='#{@article.image}' alt = ''>
                   <div class = 'absolute bottom p-left-20 p-bottom-10 z-2' >
-                  <p class = 'm-bottom-10 extra-bold color-secondary'>#{@best_article.title}</p>
-                  <p class = 'color-white'>#{@best_article.text}</p>
+                  <p class = 'm-bottom-10 extra-bold color-secondary'>#{@article.title}</p>
+                  <p class = 'color-white'>#{@article.text.truncate(200, omission: '...')}</p>
                   </div>"
     end
     content.html_safe

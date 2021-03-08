@@ -2,7 +2,8 @@ module ApplicationHelper
   def session_links
     content = ''
     if session[:id]
-      content << "<span class = 'color-primary small'>#{current_user.name}</span>
+      current_user_path = "/users/#{current_user.id}"
+      content << "<span class = 'color-primary small'>#{link_to current_user.name, current_user_path}</span>
                   <span class = 'm-left-10 color-primary small'>|</span>
                   <span class = 'm-left-10 color-primary small'>#{link_to 'Create article', new_article_path}</span>
                   <span class = 'm-left-10 color-primary small'>|</span>

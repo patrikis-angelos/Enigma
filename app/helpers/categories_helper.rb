@@ -21,4 +21,23 @@ module CategoriesHelper
   def latest_article(category)
     category.last_article unless category.articles.empty?
   end
+
+  def show_category_names(article)
+    content = ''
+    if @category
+      content << "<p class = 'color-secondary-light bold'>#{@category.name}</p>"
+      content << "<div class = 'underline bg-color-secondary-light'>"
+      content << "</div>"
+    elsif @user
+      article.categories.each do |category|
+        cat_path = "/categories/#{category.id}"
+        content << "<div class = 'm-right-5'>"
+        content << "<p class = 'p-right-5 color-secondary-light bold'>#{link_to category.name, cat_path}</p>"
+        content << "<div class = 'underline bg-color-secondary-light'>"
+        content << "</div>"
+        content << "</div>"
+      end
+    end
+    content.html_safe
+  end
 end

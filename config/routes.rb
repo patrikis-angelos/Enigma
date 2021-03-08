@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/sessions', to: 'sessions#new'
   put '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#delete'
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
   resources :categories, only: [:index, :show]
   resources :articles, only: [:new, :create] do
     resources :votes, only: [:create, :destroy]

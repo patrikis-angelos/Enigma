@@ -1,5 +1,6 @@
 <div class = "rounded">
   <div class = "best-article relative">
+    <p class = "p-left-10 m-top-5 extra-small absolute z-2 color-secondary bold">Written by <%= link_to @article.author.name, "/users/#{@article.author.id}" %></p>
     <%= show_best_article %>
   </div>
 </div>
