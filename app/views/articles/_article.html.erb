@@ -9,7 +9,7 @@
     </div>
     <p class = "m-top-40 p-left-10 bold"><%= article.title %></p>
     <p class = "p-left-10 m-top-5 extra-small">by <%= article.author.name %></p>
-    <p class = "p-left-10 m-top-10"><%= article.text %></p>
+    <p class = "content p-left-10 m-top-10"><%= show_truncated_text(article) %>...</p>
     <div class = "flex absolute bottom width-50 m-bottom-20 p-left-10">
       <p class = "color-secondary"><a href="#">Read more</a></p>
       <p class = "absolute right p-right-10"><%= show_upvote(article) %></p>

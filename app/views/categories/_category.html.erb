@@ -1,11 +1,11 @@
 <div class = "category relative rounded">
   <div class = "radial-grad absolute z-1"></div>
-  <img class = "absolute img" src="<%= latest_article(category).image %>" alt="">
+  <img class = "absolute img" src="<%= show_image(category) %>" alt="">
   <div class = "absolute p-left-20 p-top-10 z-2">
     <p class = "color-white extra-bold"><%= link_to category.name, category%></p>
     <div class = "underline bg-color-yellow"></div>
   </div>
   <div class = "absolute bottom p-left-20 p-bottom-10 z-2">
-    <p class = "color-white bold"><%= latest_article(category).title %></p>
+    <p class = "color-white bold"><%= show_title(category) %></p>
   </div>
 </div>

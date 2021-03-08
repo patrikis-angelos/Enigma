@@ -49,3 +49,8 @@
   background-color: white;
   z-index: 1;
 }
+
+.content {
+  overflow: hidden;
+  height: calc(100% - 150px)
+}
