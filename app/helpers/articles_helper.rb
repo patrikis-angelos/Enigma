@@ -44,18 +44,6 @@ module ArticlesHelper
     content.html_safe
   end
 
-  def latest_article(category)
-    category.last_article unless category.articles.empty?
-  end
-
-  def show_image(category)
-    latest_article(category)&.image
-  end
-
-  def show_title(category)
-    latest_article(category)&.title
-  end
-
   def show_truncated_text(article)
     article.text.truncate(900, omission: '...')
   end

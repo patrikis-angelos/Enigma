@@ -25,10 +25,6 @@ $colors: (
   .bg-color-#{$key} {
     background-color: $value;
   }
-
-  .hover-#{key}:hover {
-    color: $value;
-  }
 }
 
 a:hover {
