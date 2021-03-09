@@ -35,7 +35,7 @@ To get started with the project follow the steps below:
 - `rails s` to start the server
 - Go to `localhost:3000` on your browser
 
-Stting Up:
+Setting Up:
   To set up the database for the project you only need to create the desired Categories with name and priority
   - `rails c`
   - `Category.create(name: "yourCategoryName", priority: "showPriority")`
