@@ -14,7 +14,7 @@ EniGma? is a Desktop app for articles about different scientific fields where
   - Can create an article
   - Upvote and Downvote (Previously upvoted) articles
 
-![Screenshot](app/assets/images/scrn)
+![Screenshot](/scrn_img/scrn)
 
 ## Built With
 
@@ -29,6 +29,7 @@ To get started with the project follow the steps below:
 - You must have yarn installed
 - `git clone https://github.com/patrick-angelos/Enigma.git`
 - `bundle install`
+- `rails webpacker:install`
 - `rails db:create`
 - `rails db:migrate`
 - `rails s` to start the server
