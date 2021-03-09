@@ -9,10 +9,10 @@ EniGma? is a Desktop app for articles about different scientific fields where
   - can see a page with the best article
   - All the latest articles
   - All articles in each category
-  - See all the articles written by a user
 - A User:
   - Can create an article
   - Upvote and Downvote (Previously upvoted) articles
+  - See all the articles written by a user
 
 ![Screenshot](/scrn_img/scrn)
 
@@ -34,6 +34,8 @@ To get started with the project follow the steps below:
 - `rails db:migrate`
 - `rails s` to start the server
 - Go to `localhost:3000` on your browser
+
+  ## [Live Version](https://enigma-articles.herokuapp.com/)
 
 ## Author
 
