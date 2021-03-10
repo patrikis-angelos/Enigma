@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @articles = @user.articles.includes(:author, :categories, :votes)
+    @articles = @user.articles.with_author_votes.with_categories
     session[:url] = "/users/#{params[:id]}"
   end
 

@@ -11,7 +11,7 @@ RSpec.feature 'Sessions' do
     expect(page).to have_content(user.name)
   end
   scenario 'A user enters the wrong username' do
-    user = create(:user)
+    create(:user)
     visit '/sessions'
     fill_in 'name', with: 'something'
     click_on 'Sign In'

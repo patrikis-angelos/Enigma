@@ -2,6 +2,7 @@ require 'rails_helper'
 require_relative '../factories'
 require_relative '../helpers'
 
+# rubocop:disable Metrics/BlockLength
 RSpec.feature 'Users' do
   scenario 'A user creates a new article' do
     log_in
@@ -36,7 +37,7 @@ RSpec.feature 'Users' do
     fill_in 'article_text', with: 'Image'
     click_on 'Submit'
     expect(category.articles.exists?(title: 'Title')).to_not eql(true)
-    expect(page).to have_content "Categories is too short"
+    expect(page).to have_content 'Categories is too short'
   end
   scenario 'A user creates an article with 2 categories selected' do
     log_in
@@ -53,3 +54,4 @@ RSpec.feature 'Users' do
     expect(category2.articles.exists?(title: 'Title')).to eql(true)
   end
 end
+# rubocop:enable Metrics/BlockLength

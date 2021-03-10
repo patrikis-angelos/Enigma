@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @articles = @category.articles.order(created_at: :desc).includes(:author, :votes)
+    @articles = @category.articles.order(created_at: :desc).with_author_votes
     session[:url] = category_path
   end
 end
