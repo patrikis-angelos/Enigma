@@ -1,0 +1,83 @@
+$pixels: (
+  5: 5px,
+  10: 10px,
+  20: 20px,
+  30: 30px,
+  40: 40px,
+  60: 60px,
+  80: 80px,
+);
+
+$index: (
+  1: 1,
+  2: 2,
+  3: 3,
+);
+
+@each $i, $value in $pixels {
+  .m-#{$i} {
+    margin: $value;
+  }
+
+  .m-left-#{$i} {
+    margin-left: $value;
+  }
+
+  .m-right-#{$i} {
+    margin-right: $value;
+  }
+
+  .m-top-#{$i} {
+    margin-top: $value;
+  }
+
+  .m-bottom-#{$i} {
+    margin-bottom: $value;
+  }
+
+  .m-x-#{$i} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .m-y-#{$i} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  .p-#{$i} {
+    padding: $value;
+  }
+
+  .p-left-#{$i} {
+    padding-left: $value;
+  }
+
+  .p-right-#{$i} {
+    padding-right: $value;
+  }
+
+  .p-top-#{$i} {
+    padding-top: $value;
+  }
+
+  .p-bottom-#{$i} {
+    padding-bottom: $value;
+  }
+
+  .p-x-#{$i} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  .p-y-#{$i} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+
+@each $key, $value in $index {
+  .z-#{$key} {
+    z-index: $value;
+  }
+}

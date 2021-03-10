@@ -1,0 +1,55 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.best-article {
+  width: 100%;
+  height: calc(65vh - 60px);
+  overflow: hidden;
+}
+
+.side-article {
+  width: 25%;
+  height: calc(65vh - 60px);
+  overflow: hidden;
+}
+
+.category {
+  width: 25%;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.article {
+  width: 50%;
+  height: 50vh;
+}
+
+.area {
+  border: none;
+  width: 30vw;
+  height: 500px;
+}
+
+.img {
+  min-width: 100%;
+}
+
+.img-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.text-container {
+  width: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+.content {
+  overflow: hidden;
+  height: calc(100% - 150px);
+}

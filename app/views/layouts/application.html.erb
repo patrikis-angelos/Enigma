@@ -6,11 +6,27 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://kit.fontawesome.com/65e5819ba9.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'reset'%>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class = "bg-color-transparent">
+    <header>
+      <%= render "layouts/nav" %>
+      <div class = "m-top-60">
+        <%= display_alert %>
+        <%= display_confirm %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class = "flex space-between footer bg-color-primary">
+      <%= render "layouts/footer"%>
+    </footer>
   </body>
 </html>

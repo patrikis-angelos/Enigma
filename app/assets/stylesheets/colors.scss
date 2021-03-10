@@ -1,0 +1,40 @@
+$primary: #4e443f;
+$primary-transparent: #4e443f1f;
+$secondary: #f66004;
+$secondary-light: #fa9455;
+$white: white;
+$alert: rgb(228, 98, 98);
+$confirm: rgb(101, 153, 101);
+
+$colors: (
+  primary: $primary,
+  transparent: $primary-transparent,
+  secondary: $secondary,
+  secondary-light: $secondary-light,
+  white: $white,
+  yellow: yellow,
+  alert: $alert,
+  confirm: $confirm
+);
+
+@each $key, $value in $colors {
+  .color-#{$key} {
+    color: $value;
+  }
+
+  .bg-color-#{$key} {
+    background-color: $value;
+  }
+}
+
+a:hover {
+  color: $secondary;
+}
+
+.color-secondary a:hover {
+  color: black;
+}
+
+footer .color-secondary a:hover {
+  color: $white;
+}

@@ -1,0 +1,16 @@
+<div class="flex column align-center full-height bg-color-primary color-white rounded">
+  <p class= "extra-bold big m-top-80">Sign Up</p>
+  <div class = "m-top-20">
+    <%= form_with model: @user do |f| %>
+      <div class = "m-bottom-10 color-secondary"><%= display_error(@user)%></div>
+      <div class = "flex column align-center">
+        <div class = "flex">
+          <div class="center-h m-right-5"><%= f.label :name, "Username"%></div>
+          <div><%= f.text_field :name, placeholder: "Enter your name"%></div>
+        </div>
+        <div class = "m-top-10"><%= f.submit "Sign Up" %></div>
+      </div>
+    <% end %>
+  </div>
+  <p class = "m-top-10 bold"><%= link_to "Already have an account?", '/sessions' %></p>
+</div>

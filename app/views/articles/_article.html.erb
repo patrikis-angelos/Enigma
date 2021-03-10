@@ -1,0 +1,17 @@
+<div class= "rounded flex article relative <%= "#{@inverse_flex}" %>" >
+  <div class = "img-container">
+    <img class = "img absolute <%= "#{@end}" %>" src="<%= article.image %>" alt="Sorry, we couldn't find your image">
+  </div>
+  <div class = "text-container bg-color-transparent">
+    <div class = "p-left-10 p-top-10">
+      <div class = "flex wrap"><%= show_category_names(article) %></div>
+    </div>
+    <p class = "m-top-20 p-left-10 bold"><%= article.title %></p>
+    <p class = "p-left-10 m-top-5 extra-small">by <%= link_to article.author.name, "/users/#{article.author.id}" %></p>
+    <p class = "content p-left-10 m-top-10"><%= show_truncated_text(article) %></p>
+    <div class = "flex absolute bottom width-50 m-bottom-20 p-left-10">
+      <p class = "color-secondary"><a href="#">Read more</a></p>
+      <p class = "absolute right p-right-10"><%= show_upvote(article) %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="flex column align-center full-height rounded bg-color-primary color-white bold">
+  <h2 class = "m-top-10 color-secondary">Create an Article</h2>
+  <%= form_with model: @article do |f| %>
+    <div><%= display_error(@article)%></div>
+    <div class = "flex space-between m-top-20">
+      <div class = "color-secondary">
+        <%= f.label :title, "Title" %>
+        <%= f.text_field :title, placeholder: "Enter the title"%>
+      </div>
+      <div class = "color-secondary">
+        <%= f.label :image, "Image"%>
+        <%= f.text_field :image, placeholder: "Enter your image url"%>
+      </div>
+    </div>
+    <div class = "m-top-20 color-secondary">
+      <div class = "m-bottom-10"><%= f.label :text, "Content"%></div>
+      <div><%= f.text_area :text, placeholder: "Write your article", class: 'area'%></div>
+    </div>
+    <div class = "m-top-10 color-secondary">Choose one or more categories</div>
+    <%= category_checkboxes(f) %>
+    <div class = "m-top-10"><%= f.submit "Submit" %></div>
+  <% end %>
+</div>
