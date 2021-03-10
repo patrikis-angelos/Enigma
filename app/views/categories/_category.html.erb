@@ -4,5 +4,5 @@
     <p class = "color-white extra-bold"><%= link_to category.name, category%></p>
     <div class = "underline bg-color-yellow"></div>
   </div>
-  <%= render partial: "articles/last_article", object: category.last_article %>
+  <%= render partial: "articles/last_article", object: category.articles.last %>
 </div>

@@ -21,8 +21,10 @@ module CategoriesHelper
   def show_category_names(article)
     content = ''
     if @category
+      content << "<div class = 'm-right-5'>"
       content << "<p class = 'color-secondary-light bold'>#{@category.name}</p>"
       content << "<div class = 'underline bg-color-secondary-light'>"
+      content << '</div>'
       content << '</div>'
     elsif @user
       article.categories.each do |category|

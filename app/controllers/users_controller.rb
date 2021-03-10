@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @categories = Category.all.order(:priority)
+    @categories = Category.all
   end
 
   def create
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @articles = @user.articles
+    @articles = @user.articles.includes(:author, :categories, :votes)
     session[:url] = "/users/#{params[:id]}"
   end
 
