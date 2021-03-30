@@ -24,7 +24,7 @@ EniGma? is a Desktop app for articles about different scientific fields where
 
 ## Getting Started
 
-You need the Postgresql database installed before proceeding with the below steps
+You need the PostgreSQL database installed before proceeding with the below steps
 To get started with the project follow the steps below:
 - You must have yarn installed
 - `git clone https://github.com/patrick-angelos/Enigma.git`
@@ -60,10 +60,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for creating this awasome layout.
+- To [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for creating this awesome layout.
 - To Microverse for their `README` template.
 
 ## 📝 License
 
-This project is under the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/) and you can Share, copy and redistribute the material in any medium or format. Adapt, remix, transform, and build upon the material as long as you give appropriate credit to the creator (Nelson Sakwa), provide a link to the license, and indicate if changes were made.
+This project is under the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/) and you can share, copy and redistribute the material in any medium or format. Adapt, remix, transform, and build upon the material as long as you give appropriate credit to the creator (Nelson Sakwa), provide a link to the license, and indicate if changes were made.
 You may not use the material for commercial purposes.
