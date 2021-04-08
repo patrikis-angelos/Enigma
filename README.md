@@ -14,7 +14,7 @@ EniGma? is a Desktop app for articles about different scientific fields where
   - Upvote and Downvote (Previously upvoted) articles
   - See all the articles written by a user
 
-![Screenshot](/scrn_img/scrn)
+![Screenshot](/scrn_img/scrn.png)
 
 ## Built With
 
